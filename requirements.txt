@@ -4,6 +4,7 @@ appdirs==1.4.3
 Babel==2.4.0
 billiard==3.5.0.2
 celery==4.0.2
+coverage==4.4
 Django==1.11.1
 djangorestframework==3.6.2
 docutils==0.13.1
