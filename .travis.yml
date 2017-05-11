@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.6"
+env:
+  -FARAMIR_DEBUG=False
+  -FARAMIR_SECRET_KEY="ld1ms9(6o*xd%jz3r_6a*m#yleqh)fkgtk$bnqgft*(j@#biqa"
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+script:
+  - coverage run --source=src --omit=src/manage.py,src/faramir/wsgi.py src/manage.py test
+after_success:
+  coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: 7f69b2bf-59ba-43da-b7e2-aac6aec59db6
+  app: faramir

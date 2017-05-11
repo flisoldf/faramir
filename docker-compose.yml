@@ -1,0 +1,30 @@
+version: '2'
+services:
+  web:
+    build: ./src
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    links:
+      - postgres:postgres
+    volumes:
+      - ./src:/usr/src/app
+    env_file: .env
+    command: gunicorn --chdir=src faramir.wsgi:application -w 2 -b :8000
+  nginx:
+    build: ./conf/nginx
+    ports:
+      - "80:80"
+    volumes:
+      - /www/static
+    volumes_from:
+      - web
+    links:
+      - web:web
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./var/pgdata:/var/lib/postgresql/data/
