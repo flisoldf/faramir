@@ -1,5 +1,10 @@
 # Faramir
 
+[![Documentation Status](https://readthedocs.org/projects/faramir/badge/?version=latest)](http://faramir.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://travis-ci.org/flisoldf/faramir.svg?branch=master)](https://travis-ci.org/flisoldf/faramir)
+[![Coverage Status](https://coveralls.io/repos/github/flisoldf/faramir/badge.svg?branch=master)](https://coveralls.io/github/flisoldf/faramir?branch=master)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/432032b5c8a34931873b8facb6d12aad/badge.svg)](https://www.quantifiedcode.com/app/project/432032b5c8a34931873b8facb6d12aad)
+
 Projeto criado para a gestão das edições do FLISOL-DF. O objetivo dele é oferecer uma plataforma que possa não só ser usado na edição do Distrito Federal, mas que esteja disponível para outros lugares que estão organizando o evento. Ele provêm as seguintes funcionalidades:
 
  - Inscrição de Participantes
